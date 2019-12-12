@@ -21,6 +21,8 @@
   "dependencies": {
     "back-end": "file:back-end",
     "front-end": "file:front-end",
-    "package.json": "^2.0.1"
+    "package.json": "^2.0.1",
+    "pg": "^7.14.0",
+    "pg-hstore": "^2.3.3"
   }
 }
