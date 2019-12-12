@@ -46,7 +46,10 @@ app.post('/login', (req, res, next) => {
       })
     }
     return res.status(401).json({ message: "username or password not match!" })
-  }).catch(err => res.status(500).send("Server interval"))
+  }).catch(err => {
+    console.log(err)
+    res.status(500).send("Server interval")
+  })
 })
 
 app.post('/register', (req, res, next) => {
@@ -56,7 +59,10 @@ app.post('/register', (req, res, next) => {
     password: bcrypt.hashSync(password, bcrypt.genSaltSync())
   }).then(user => {
     res.json({ id: user.id, username: user.username });
-  }).catch(err => res.status(500).send("Server interval"))
+  }).catch(err => {
+    console.log(err)
+    res.status(500).send("Server interval")
+  })
 })
 
 app.listen(process.env.PORT || 3000);
