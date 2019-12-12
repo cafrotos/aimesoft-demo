@@ -36,7 +36,10 @@ class Address extends React.Component {
     try {
       const response = await Axios({
         url: GET_DATA_URL + "/get_provinces",
-        method: "GET"
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
       })
       const fnsGetProvincePopulations = response.data.map(province => this.getProvincePopulation(province.id))
       const provincePopulations = await Promise.all(fnsGetProvincePopulations);
@@ -59,6 +62,9 @@ class Address extends React.Component {
       const response = await Axios({
         url: `${GET_DATA_URL}/province_population?province_id=${id}`,
         method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
       })
       return response.data.population
     } catch (error) {
@@ -71,6 +77,9 @@ class Address extends React.Component {
       const response = await Axios({
         url: `${GET_DATA_URL}/district_population?province_id=${proId}&district_id=${disId}`,
         method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
       })
       return response.data.population
     } catch (error) {
@@ -83,6 +92,9 @@ class Address extends React.Component {
       const response = await Axios({
         url: GET_DATA_URL + "/get_districts?province_id=" + id,
         method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
       })
       return response.data
     } catch (error) {

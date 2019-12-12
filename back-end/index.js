@@ -14,6 +14,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/', express.static(__dirname + "/../front-end/build"));
+app.use('/address', express.static(__dirname + "/../front-end/build"));
+app.use('/login', express.static(__dirname + "/../front-end/build"));
 
 app.get('/me', (req, res, next) => {
   const authorization = req.headers.authorization;
