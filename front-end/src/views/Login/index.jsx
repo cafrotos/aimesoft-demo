@@ -2,7 +2,6 @@ import React from 'react';
 import { Redirect, withRouter} from 'react-router-dom'
 import { Row, Col, Input, Button, Form } from 'antd';
 import Axios from 'axios';
-import { BASE_URL } from '../../constant';
 import './style.less'
 
 class Login extends React.Component {
@@ -39,7 +38,7 @@ class Login extends React.Component {
     }
     try {
       const response = await Axios({
-        url: BASE_URL + "/login",
+        url: "/login",
         method: "POST",
         data: {
           username: this.state.username,

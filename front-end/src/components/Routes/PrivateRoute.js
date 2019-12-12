@@ -1,6 +1,5 @@
 import { Route, Redirect, withRouter } from 'react-router-dom';
 import React from 'react';
-import { BASE_URL } from '../../constant';
 import Axios from 'axios';
 
 
@@ -30,7 +29,7 @@ class PrivateRoute extends React.Component {
     }
     try {
       await Axios({
-        url: BASE_URL + "/me",
+        url: "/me",
         method: "GET",
         headers: {
           "authorization": "Bearer " + token
