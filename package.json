@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": " cd ./back-end && ./node_modules/.bin/sequelize db:create && ./node_modules/.bin/sequelize db:migrate && node index.js",
+    "start": " cd ./back-end && ./node_modules/.bin/sequelize db:migrate && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
