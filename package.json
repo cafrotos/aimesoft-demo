@@ -1,0 +1,26 @@
+{
+  "name": "aimesoft-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./back-end/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhphuong99/aimesoft-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhphuong99/aimesoft-demo/issues"
+  },
+  "homepage": "https://github.com/minhphuong99/aimesoft-demo#readme",
+  "dependencies": {
+    "back-end": "file:back-end",
+    "front-end": "file:front-end",
+    "package.json": "^2.0.1"
+  }
+}
