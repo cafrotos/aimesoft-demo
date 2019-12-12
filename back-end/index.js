@@ -59,4 +59,4 @@ app.post('/register', (req, res, next) => {
   }).catch(err => res.status(500).send("Server interval"))
 })
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
