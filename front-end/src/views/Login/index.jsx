@@ -19,7 +19,8 @@ class Login extends React.Component {
     this.setState({
       [name]: event.target.value,
       disabled: false,
-      [`${name}Err`]: ""
+      [`${name}Err`]: "",
+      message: ""
     })
   }
 
