@@ -1,1 +1,1 @@
-export const GET_DATA_URL = "http://mockserver-quantv.herokuapp.com"
+export const GET_DATA_URL = "https://mockserver-quantv.herokuapp.com"
